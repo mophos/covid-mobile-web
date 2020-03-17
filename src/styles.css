@@ -68,7 +68,7 @@
 }
 .sum-box2-2 {
     margin: 0rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: center;
     color: white;
     font-weight: bold;
@@ -76,7 +76,7 @@
 .sum-box2-3 {
     width: 100%;
     margin: 0rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     color: white;
     font-weight: bold;
@@ -92,8 +92,8 @@
     margin-top: 0.5em;
 }
 .margin-mobile-left-right {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
 }
 
 .card-mobile{
@@ -154,7 +154,7 @@
 
 .text-update {
     color: white;
-    font-size: 0.1rem;
+    font-size: 0.7rem;
     float: left;
     padding-left: 1rem;
     padding-top: 1rem;
