@@ -10,6 +10,11 @@
     font-family: 'Kanit';
 }
 
+.layout-head {
+    font-size: 1rem; 
+    line-height: 0rem;
+}
+
 .world {
     background-image: url("./assets/pic/world.png");
     background-position: center;
@@ -218,6 +223,11 @@
 }
 
 @media screen and (max-width: 1024px) and (min-width: 600px) {
+    .layout-head {
+        font-size: 2rem; 
+        line-height: 0rem;
+    }
+
     .world {
         background-image: url("./assets/pic/world.png");
         background-position: center;
