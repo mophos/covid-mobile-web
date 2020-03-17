@@ -1,0 +1,35 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="bg-dark">
+	<div>
+		<!-- <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+              <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
+                THAILAND</div>
+            </div>
+          </div> -->
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-xs-12">
+				<label for="" class="text-update">อัพเดทล่าสุด {{dataTh.datetime | datetime}}</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-sm-12 margin-mobile-top">
+				<div class="overflow-auto" style="height: 100vh;width: 100%;">
+					<div *ngFor="let i of dataGlobal">
+						<div class="card bg-dark overflow-hidden">
+							<div class="card-body">
+								<span class="text-country">{{i.country}}</span>
+								<br>
+								<span class="color-brown">ยืนยันแล้ว : {{i.totalCases}}</span>
+								<br>
+								<span class="color-pink">เสียชีวิต : {{i.totalDeaths}}</span>
+								<br>
+								<span class="color-green">รักษาหาย : {{i.totalRecovered}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

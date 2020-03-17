@@ -1,84 +1,133 @@
-
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="bg-dark">
-    <div>
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-xs-12">
-          <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
-            THAILAND</div>
-        </div>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="bg-dark">
+  <div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="head">COVID-19 <img src="../../../assets/pic/thailand_640.png" alt="" width="10%;">
+          THAILAND</div>
       </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-xs-12">
-          <label for="" class="text-update">อัพเดทล่าสุด {{dataTh.datetime | datetime}}</label>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-xs-12">
+        <label for="" class="text-update">อัพเดทล่าสุด {{dataTh.datetime | datetime}}</label>
       </div>
-      <div class="row">
-        <div class="col-md-12 col-sm-12 margin-mobile-left-right">
-          <div class="row">
-            <div class="col-md-12 col-12 col-sm-12" style="padding: 0.1rem;">
-              <div class="card sum-box1-1">
-                <div class="card-body">
-                  <span class="sum-box1-2">ผู้ติดเชื้อ</span>
-                  <br>
-                  <div class="sum-box1-3">
-                    {{dataTh.confirm_total || 0}}
-                    <label class="sum-box1-4">&#8593; {{dataTh.confirm_new || 0}}</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
-              <div class="card sum-box2-1 background-brown">
-                <div class="card-body card-mobile">
-                  <span class="sum-box2-2">รุนแรง</span>
-                  <br>
-                  <span class="sum-box2-3">
-                    {{dataTh.confirm_critical || 0}}
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
-              <div class="card sum-box2-1 background-green">
-                <div class="card-body card-mobile">
-                  <span class="sum-box2-2">หายแล้ว</span>
-                  <br>
-                  <span class="sum-box2-3">
-                    {{dataTh.confirm_recover || 0}}
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
-              <div class="card sum-box2-1 background-pink">
-                <div class="card-body card-mobile">
-                  <span class="sum-box2-2">เสียชีวิต</span>
-                  <br>
-                  <span class="sum-box2-3">
-                    {{dataTh.confirm_dead || 0}}
-                  </span>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 margin-mobile-left-right">
+        <div class="row">
+          <div class="col-md-12 col-12 col-sm-12" style="padding: 0.1rem;">
+            <div class="card sum-box1-1 background-pink">
+              <div class="card-body">
+                <span class="sum-box1-2">ผู้ติดเชื้อ</span>
+                <br>
+                <div class="sum-box1-3">
+                  {{dataTh.confirm_total || 0}}
+                  <label class="sum-box1-4">&#8593; {{dataTh.confirm_new || 0}}</label>
                 </div>
               </div>
             </div>
           </div>
-          <span class="refer">แหล่งที่มา : กรมควบคุมโรค</span>
+          <div class="col-md-4 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+            <div class="card sum-box2-1 background-brown">
+              <div class="card-body card-mobile">
+                <span class="sum-box2-2">รุนแรง</span>
+                <br>
+                <span class="sum-box2-3">
+                  {{dataTh.confirm_critical || 0}}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+            <div class="card sum-box2-1 background-green">
+              <div class="card-body card-mobile">
+                <span class="sum-box2-2">หายแล้ว</span>
+                <br>
+                <span class="sum-box2-3">
+                  {{dataTh.confirm_recover || 0}}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-4 col-sm-4 margin-mobile-top" style="padding: 0.1rem;">
+            <div class="card sum-box2-1 background-red">
+              <div class="card-body card-mobile">
+                <span class="sum-box2-2">เสียชีวิต</span>
+                <br>
+                <span class="sum-box2-3">
+                  {{dataTh.confirm_dead || 0}}
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- <div class="col-md-12 col-sm-12 margin-mobile-top">
-          <img src="../../../assets/pic/thailand-map.png" alt="" width="90%;">
-        </div> -->
-        <div class="col-md-12 col-sm-12 margin-mobile-top">
-          <div class="overflow-auto" style="height: 70vh;width: 100%;">
-            <div *ngFor="let i of dataGlobal">
-              <div class="card bg-dark overflow-hidden">
-                <div class="card-body">
-                  <span class="text-country">{{i.country}}</span>
-                  <br>
-                  <span class="color-brown">ยืนยันแล้ว : {{i.totalCases}}</span>
-                  <br>
-                  <span class="color-pink">เสียชีวิต : {{i.totalDeaths}}</span>
-                  <br>
-                  <span class="color-green">รักษาหาย : {{i.totalRecovered}}</span>
+      </div>
+      <div class="container" style="padding-top: 1rem;">
+        <div class="row">
+          <div class="col-12 topic-text">
+            <div>
+              เข้าเกณฑ์เฝ้าระวัง(คน)
+            </div>
+          </div>
+          <div class="col-6 watch-out-text">
+            <div>
+              สะสม
+            </div>
+            <div class="watch-out-number color-bule">
+              {{dataTh.observe_total || 0}}
+            </div>
+          </div>
+          <div class="col-6 watch-out-text">
+            <div>
+              รายใหม่
+            </div>
+            <div class="watch-out-number color-bule">
+              {{dataTh.observe_new || 0}}
+            </div>
+          </div>
+          <div class="col-4 watch-out-text">
+            <div>
+              อยู่รพ.
+            </div>
+            <div class="watch-out-number color-pink">
+              {{dataTh.observe_hospital || 0}}
+            </div>
+          </div>
+          <div class="col-4 watch-out-text">
+            <div>
+              กลับบ้าน
+            </div>
+            <div class="watch-out-number color-pink">
+              {{dataTh.observe_recover || 0}}
+            </div>
+          </div>
+          <div class="col-4 watch-out-text">
+            <div>
+              สังเกตอาการ
+            </div>
+            <div class="watch-out-number color-pink">
+              {{dataTh.observe_ovserve || 0}}
+            </div>
+          </div>
+        </div>
+        <span class="refer">แหล่งที่มา : กรมควบคุมโรค</span>
+      </div>
+      <div class="col-md-12 col-sm-12 margin-mobile-top" style="padding-bottom: 5rem;">
+        <div class="overflow-auto">
+          <div class="card bg-dark overflow-hidden" style="border-color: gray;">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let i of pr; let idx = index; let isFirst = first" [ngClass]="{active:isFirst}">
+                  <div class="row">
+                    <div class="col-6" style="padding: 0rem;">
+                      <img src="{{i.enclosure.url}}" alt="" class="new-pic">
+                    </div>
+                    <div class="col-6">
+                      <a href="{{i.link}}">
+                        <label for="" class="text-new-head">{{i.title}}</label>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -87,3 +136,4 @@
       </div>
     </div>
   </div>
+</div>

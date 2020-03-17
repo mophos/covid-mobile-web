@@ -1,16 +1,15 @@
-import { ApiService } from './../service/api.service';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from './../service/api.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-overall',
+  templateUrl: './overall.component.html',
   styles: []
 })
-export class HomeComponent implements OnInit {
+export class OverallComponent implements OnInit {
 
+  dataGlobal: any = [];
   dataTh: any = {};
-  country: any = [];
-  pr: any = [];
 
   constructor(
     private apiService: ApiService
@@ -18,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getSummaryTH();
-    this.getPR();
+    this.getSummaryGlobal();
   }
 
   async getSummaryTH() {
@@ -32,15 +31,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  async getPR() {
+  async getSummaryGlobal() {
     try {
-      const rs: any = await this.apiService.getPR();
+      const rs: any = await this.apiService.getSummaryGlobal();
       if (rs.ok) {
-        for (const v of rs.rows) {
-          if (v.title.length !== undefined) {
-            this.pr.push(v);
-          }
-        }
+        this.dataGlobal = rs.rows;
       }
     } catch (error) {
 
