@@ -222,7 +222,17 @@
     padding: 1rem;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 600px) {
+@media screen and (max-width: 600px) {
+    .sum-box2-2 {
+        margin: 0rem;
+        font-size: 0.7rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 600px) {
     .layout-head {
         font-size: 2rem; 
         line-height: 0rem;
