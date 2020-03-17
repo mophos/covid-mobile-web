@@ -7,9 +7,6 @@
 
 .row {
     margin: 0rem;
-}
-
-.div{
     font-family: 'Kanit';
 }
 
@@ -25,6 +22,7 @@
     font-weight: bold;
     color: white;
     font-size: 7vw;
+    padding-top: 1rem;
 }
 .moph {
     width: 10%;
