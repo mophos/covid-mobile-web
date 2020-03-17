@@ -10,6 +10,20 @@
     font-family: 'Kanit';
 }
 
+.layout-head {
+    font-size: 1rem; 
+    line-height: 0rem;
+}
+
+.world {
+    background-image: url("./assets/pic/world.png");
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .box-container {
     display: inline-block;
     float: left;
@@ -32,7 +46,6 @@
     margin: 0rem;
     width: 100%;
     height: 50vw;
-    background-color: rgb(216, 30, 37);
     border-radius: 0.5rem;
 }
 .sum-box1-2 {
@@ -160,7 +173,71 @@
     padding-top: 1rem;
 }
 
-@media screen and (max-width: 900px) and (min-width: 600px) {
+.news {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+.text-new-head {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.text-new-detail {
+    color: gray;
+    font-size: 0.3rem;
+}
+
+.new-pic {
+    width: 100%;
+}
+
+.topic-text {
+    color: black;
+    font-size: 2rem;
+    font-family: 'Kanit';
+    text-align: center;
+    background-color: white;
+    border: 1px white double;
+    padding: 1.75rem;
+}
+
+.watch-out-text{
+    color: white;
+    font-size: 1rem;
+    font-family: 'Kanit';
+    text-align: center;
+    border: 1px white double;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.watch-out-number{
+    font-size: 2rem;
+    font-family: 'Kanit';
+}
+
+.bottom-navbar {
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+    .layout-head {
+        font-size: 2rem; 
+        line-height: 0rem;
+    }
+
+    .world {
+        background-image: url("./assets/pic/world.png");
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+    }
+
     .text-update {
         color: white;
         font-size: 1rem;
@@ -174,7 +251,6 @@
         margin: 0rem;
         width: 100%;
         height: 50vw;
-        background-color: rgb(216, 30, 37);
         border-radius: 0.5rem;
     }
 

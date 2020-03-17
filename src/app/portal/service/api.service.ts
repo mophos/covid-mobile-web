@@ -23,4 +23,16 @@ export class ApiService {
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
+
+  async getPR() {
+    const url = `${this.url}/pr`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
+
+  async getPics() {
+    const url = `${this.url}/info`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
 }
