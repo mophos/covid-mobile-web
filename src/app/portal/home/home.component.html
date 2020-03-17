@@ -1,4 +1,4 @@
-<main role="main">
+
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="bg-dark">
     <div>
@@ -21,10 +21,10 @@
                 <div class="card-body">
                   <span class="sum-box1-2">ผู้ติดเชื้อ</span>
                   <br>
-                  <span class="sum-box1-3">
+                  <div class="sum-box1-3">
                     {{dataTh.confirm_total || 0}}
-                  </span>
-                  <label class="sum-box1-4">&#8593; {{dataTh.confirm_new || 0}}</label>
+                    <label class="sum-box1-4">&#8593; {{dataTh.confirm_new || 0}}</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -87,4 +87,3 @@
       </div>
     </div>
   </div>
-</main>
