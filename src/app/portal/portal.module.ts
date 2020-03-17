@@ -1,3 +1,4 @@
+import { PipeModule } from './../pipe/pipe.module';
 import { ApiService } from './service/api.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,8 @@ import { HomeComponent } from './home/home.component';
   declarations: [LayoutComponent, HomeComponent],
   imports: [
     CommonModule,
-    PortalRoutingModule
+    PortalRoutingModule,
+    PipeModule
   ],
   providers: [
     ApiService
