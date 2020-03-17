@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   dataTh: any = {};
   country: any = [];
   pr: any = [];
+  pics: any = [];
 
   constructor(
     private apiService: ApiService
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getSummaryTH();
     this.getPR();
+    this.getPics();
   }
 
   async getSummaryTH() {
@@ -41,6 +43,17 @@ export class HomeComponent implements OnInit {
             this.pr.push(v);
           }
         }
+      }
+    } catch (error) {
+
+    }
+  }
+
+  async getPics() {
+    try {
+      const rs: any = await this.apiService.getPics();
+      if (rs.ok) {
+        this.pics = rs.rows;
       }
     } catch (error) {
 

@@ -29,4 +29,10 @@ export class ApiService {
     const rs: any = await this.http.get(url).toPromise();
     return rs;
   }
+
+  async getPics() {
+    const url = `${this.url}/info`;
+    const rs: any = await this.http.get(url).toPromise();
+    return rs;
+  }
 }
