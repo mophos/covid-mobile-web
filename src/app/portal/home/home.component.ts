@@ -18,9 +18,18 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.addVisit();
     this.getSummaryTH();
     this.getPR();
     this.getPics();
+  }
+
+  async addVisit() {
+    try {
+      await this.apiService.addVisit();
+    } catch (error) {
+
+    }
   }
 
   async getSummaryTH() {
