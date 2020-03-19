@@ -47,11 +47,7 @@ export class HomeComponent implements OnInit {
     try {
       const rs: any = await this.apiService.getPR();
       if (rs.ok) {
-        for (const v of rs.rows) {
-          if (v.title.length !== undefined) {
-            this.pr.push(v);
-          }
-        }
+        this.pr = rs.rows;
       }
     } catch (error) {
 
